@@ -1,6 +1,12 @@
 # SixGPT Miner
 This is the official SixGPT miner.
 
+# About
+
+SixGPT is a decentralized synthetic data generation platform built on the Vana network. We empower users by giving them ownership of their data and enabling them to earn from it.
+
+The SixGPT Miner is a software package which allows users to contribute data they generate for wikipedia question-answer based tasks to the network for rewards.
+In the future, we will support other tasks such as chatbot conversations, image captioning, etc.
 
 ## Prerequisites
 (1) install docker on your machine. (https://docs.docker.com/engine/install/)
