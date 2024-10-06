@@ -18,7 +18,7 @@ services:
     environment:
       - VANA_PRIVATE_KEY=${VANA_PRIVATE_KEY}
       - VANA_NETWORK=${VANA_NETWORK}
-    restart: unless-stopped
+    restart: no
 
 volumes:
   ollama:

@@ -4,6 +4,7 @@ This is the official SixGPT miner.
 
 ## Prerequisites
 (1) install docker on your machine. (https://docs.docker.com/engine/install/)
+
 (2) Fund your wallet with $VANA and log onto sixgpt.xyz with it.
 
 
@@ -17,8 +18,8 @@ cd miner
 Set the following environment variables:
 ```
 export VANA_PRIVATE_KEY=<your_private_key>
-export VANA_NETWORK=satoshi // satoshi | moksha | mainnet
-
+export VANA_NETWORK=satori
+```
 
 Run the miner:
 ```
