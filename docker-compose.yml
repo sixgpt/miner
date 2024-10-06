@@ -10,7 +10,7 @@ services:
     restart: unless-stopped
  
   sixgpt3:
-    image: sixgpt/miner
+    image: sixgpt/miner:latest
     ports:
       - "3000:3000"
     depends_on:
