@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  ollama:
+    image: ollama/ollama:0.3.12
+    ports:
+      - "11439:11434"
+    volumes:
+      - ollama:/root/.ollama
+    restart: unless-stopped
+ 
+  sixgpt3:
+    image: sixgpt/miner
+    ports:
+      - "3000:3000"
+    depends_on:
+      - ollama
+    environment:
+      - VANA_PRIVATE_KEY=${VANA_PRIVATE_KEY}
+      - VANA_NETWORK=${VANA_NETWORK}
+    restart: unless-stopped
+
+volumes:
+  ollama:
