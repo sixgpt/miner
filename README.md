@@ -11,7 +11,7 @@ In the future, we will support other tasks such as chatbot conversations, image 
 ## Prerequisites
 (1) install docker on your machine. (https://docs.docker.com/engine/install/)
 
-(2) Fund your wallet with $VANA and log onto sixgpt.xyz with it.
+(2) Fund your wallet with at least 0.1 $VANA
 
 (3) Login with this wallet on sixgpt.xyz
 
