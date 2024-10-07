@@ -13,6 +13,8 @@ In the future, we will support other tasks such as chatbot conversations, image 
 
 (2) Fund your wallet with $VANA and log onto sixgpt.xyz with it.
 
+(3) Login with this wallet on sixgpt.xyz
+
 
 ## Run the miner
 Clone the repository:
