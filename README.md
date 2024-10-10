@@ -61,3 +61,20 @@ CTRL+A+D to Exit
 ## Notes
 - You must have logged into sixgpt.xyz with your wallet before running the miner
 - Make sure the wallet associated with your vana private key has enough $VANA balance on the desired network (at least 0.1)
+
+
+## Additional Notes on Handling GPU Detection
+- [ollama github](https://github.com/ollama/ollama)
+- [ollama docker](https://hub.docker.com/r/ollama/ollama)
+- NVIDIA GPUs: Ensure that you have the NVIDIA Container Toolkit installed to enable GPU support in Docker. You can follow the installation guide [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html).
+- AMD GPUs: For AMD, ensure that the ROCm (Radeon Open Compute) stack is installed and configured correctly. More details can be found on the official ROCm documentation [ROCm (Radeon Open Compute) stack](https://rocm.docs.amd.com/en/latest/).
+
+```
+If there is no GPU, remove the following section:
+# deploy:
+#   resources:
+#     reservations:
+#       devices:
+#         - count: all
+#           capabilities: [gpu]  # This allows Docker to detect any available GPU
+```
