@@ -4,11 +4,22 @@ services:
   ollama:
     image: ollama/ollama:0.3.12
     ports:
-      - "11439:11434"
+      - "11434:11434"
     volumes:
       - ollama:/root/.ollama
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - count: all
+              capabilities: [gpu]  # This allows Docker to detect any available GPU
     restart: unless-stopped
- 
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+        
   sixgpt3:
     image: sixgpt/miner:latest
     ports:
@@ -19,6 +30,11 @@ services:
       - VANA_PRIVATE_KEY=${VANA_PRIVATE_KEY}
       - VANA_NETWORK=${VANA_NETWORK}
     restart: no
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
 
 volumes:
   ollama:

@@ -31,8 +31,32 @@ export VANA_NETWORK=satori
 
 Run the miner:
 ```
-docker compose up
+docker-compose up -d
 ```
+
+Check Logs miner:
+```
+docker-compose logs -f
+```
+
+Stop the miner:
+```
+docker-compose down
+```
+Get this log?:
+```
+ollama-1   | time=2024-10-10T07:42:26.890Z level=INFO source=download.go:370 msg="dde5aa3fc5ff part 2 stalled; retrying. If this persists, press ctrl-c to exit, then 'ollama pull' to find a faster connection."
+ollama-1   | time=2024-10-10T07:42:42.276Z level=INFO source=download.go:370 msg="dde5aa3fc5ff part 13 stalled; retrying. If this persists, press ctrl-c t
+```
+
+Run:
+```
+docker exec -it miner-ollama-1 /bin/bash
+```
+```
+ollama pull llama3.2
+```
+CTRL+A+D to Exit
 
 ## Notes
 - You must have logged into sixgpt.xyz with your wallet before running the miner
