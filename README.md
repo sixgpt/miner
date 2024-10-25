@@ -26,7 +26,7 @@ cd miner
 Set the following environment variables:
 ```
 export VANA_PRIVATE_KEY=<your_private_key>
-export VANA_NETWORK=satori
+export VANA_NETWORK=moksha
 ```
 
 Run the miner:
